@@ -1,0 +1,174 @@
+/*  */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* body */
+body {
+    background: #612378;
+    box-sizing: border-box;
+}
+
+/* nav bar with menu */
+nav {
+    background: #612378;
+    height: 80px;
+    display: flex;
+    justify-content: right;
+    padding: 0 2rem;
+    align-items: center;
+    border: 2px solid white;
+}
+ul.menu {
+    display: flex;
+    list-style: none;
+}
+ul.menu li {
+    margin-left: 1rem;
+    font-size: 2rem;
+}
+ul.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* header */
+header {
+    max-width: 100%;
+    height: 400px; 
+    padding-top: 2rem;  
+}
+
+/* Promote */
+.Promote {
+    padding-top: 2rem;
+}
+.Promote h1{
+    font-size: 4rem;
+    color: white;
+    padding-bottom: 1rem;
+}
+.Promote p{
+    font-size: 2rem;
+    color: white;
+    padding-bottom: 1rem;
+}
+.button1 {
+    border: none;
+    color: #612378;
+    padding: 2rem 6rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 20px 40px;
+    cursor: pointer;
+}
+
+/* main */
+main {
+    padding: 2rem 0;
+}
+
+/* part1 */
+.part1 {
+    display: grid;
+    grid-template-columns: 2.8fr 1.4fr;
+}
+.text-box1 {
+    float: right;
+}
+.part1-texts {
+    /* border: 1px solid red; */
+    padding: 2rem;
+    padding-top: 2rem;
+    text-align: left; 
+    float: right;
+    color: white;
+    max-width: 70%;
+}
+.part1-texts h2 {
+    font-size: 3rem;
+    padding-bottom: 2%;
+}
+.part1-texts p {
+    font-size: 1.2rem;
+}
+.part1-picture {
+    /* border: 1px solid red; */
+    padding: 2rem;
+    text-align: left; 
+    max-width: 30%;
+}
+
+/* header of part2 */
+.header2 h2{
+    /* border: 1px solid red; */
+    align-items: center;
+    padding: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    color: white;
+    font-size: 3rem;
+}
+
+/* part2 */
+.part2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.part2-customer-reviewed {
+    /* border: 1px solid red; */
+    padding: 2rem;
+    text-align: center; 
+}
+.part2-customer-reviewed h3 {
+    padding-top: 2.5rem;
+    color: white;
+}
+.part2-customer-reviewed p {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+.part2-customer-reviewed img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+
+/* part3 */
+.part3 {
+    max-width: 0.5fr;
+    max-height: 400px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.part3-container { 
+    /* border: 2px solid red; */
+    overflow: auto
+}
+.part3-picture {
+    float: left
+}
+.part3-picture img {
+    display: block
+}
+.part3-content {
+    max-width: 60%;
+    color: white;
+    text-align: left;
+    float: right;
+}
+.part3-title {
+    font-weight: bold;
+    font-size: 200%;
+    color: white;
+}
