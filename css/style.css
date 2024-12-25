@@ -39,7 +39,7 @@ nav {
     font-weight: 800;
     letter-spacing: 0.2rem;
     cursor:default;
-    font-size: clamp(1.2rem, 5vw, 3.5rem);
+    font-size: clamp(1rem, 5vw, 3.5rem);
     text-transform: uppercase;
 }
 
@@ -55,7 +55,7 @@ nav {
 
 .nav-bar-items li a{
     color: black;
-    font-size: clamp(0.7rem, 3vw, 1.5rem);
+    font-size: clamp(0.5rem, 3vw, 1.5rem);
 }
 
 .nav-bar-items li a:hover{
@@ -212,6 +212,12 @@ nav {
     text-align: center;
     align-content: center;
     font-size: clamp(1rem, 2vw, 2rem);
+}
+
+#section3 #gradio {
+    width: 80%;
+    height: 70%;
+    border: 2px solid;
 }
 
 /* mobile */
