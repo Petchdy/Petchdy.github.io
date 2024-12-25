@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Page Website with Animation</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth; /* Smooth scrolling between sections */
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      z-index: 1000; /* Ensure it stays above other content */
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Section Styles */
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 2em;
+      opacity: 0; /* Start hidden */
+      transform: translateY(50px); /* Slide in effect */
+      animation: fadeInUp 1s forwards; /* Apply animation */
+    }
+
+    #section1 {
+      background: #f44336;
+      animation-delay: 0.2s; /* Slight delay for each section */
+    }
+
+    #section2 {
+      background: #2196f3;
+      animation-delay: 0.4s;
+    }
+
+    #section3 {
+      background: #4caf50;
+      animation-delay: 0.6s;
+    }
+
+    /* Keyframes for Fade-In Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px); /* Start below the viewport */
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0); /* End in place */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#section1">Section 1</a>
+    <a href="#section2">Section 2</a>
+    <a href="#section3">Section 3</a>
+  </nav>
+
+  <!-- Sections -->
+  <section id="section1">Welcome to Section 1</section>
+  <section id="section2">This is Section 2</section>
+  <section id="section3">You are in Section 3</section>
+
+  <script>
+    // Function to check if an element is in the viewport
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return rect.top >= 0 && rect.bottom <= window.innerHeight;
+    }
+
+    // Function to handle scrolling and apply the 'visible' class
+    function handleScroll() {
+      const sections = document.querySelectorAll('section');
+      sections.forEach((section) => {
+        if (isInViewport(section)) {
+          section.classList.add('visible');
+        }
+      });
+    }
+
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Trigger animations for visible sections on page load
+    window.addEventListener('load', handleScroll);
+  </script>
+
+</body>
+</html>

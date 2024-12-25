@@ -1,0 +1,240 @@
+*{
+    font-family: "Roboto", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.site-container {
+    min-height: 100vh;
+}
+
+section {
+    /* border: 2px solid rgb(162, 94, 222); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+/*  */
+
+nav {
+    /* border: 2px solid red; */
+    z-index: 1000;
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    border-bottom: 3px solid #5b5b5b;
+}
+
+.Name{
+    /* border: 2px solid red; */
+    display: flex;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    cursor:default;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-transform: uppercase;
+}
+
+.nav-bar-items{
+    /* border: 2px solid blue; */
+    display: flex;
+}
+
+.nav-bar-items li{
+    list-style: none;
+    margin: 0 0.75rem;
+}
+
+.nav-bar-items li a{
+    color: black;
+}
+
+.nav-bar-items li a:hover{
+    color: #3a40ac;
+}
+
+/*  */
+
+#section1 {
+    /* border: 2px solid green; */
+    height: calc(100vh - 10vh);
+}
+
+#section1 #first-half {
+    /* border: 2px solid green; */
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#section1 #first-half h2 {
+    padding: 0.5rem;
+    font-size: clamp(1rem, 5vw, 3rem);
+}
+
+#section1 #first-half p {
+    padding: 0.5rem;
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+
+#section1 #first-half .links {
+    /* border: 2px solid goldenrod; */
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    letter-spacing: 2vw;
+}
+
+#section1 #first-half .links a{
+    color: black;
+    margin: 2rem 0.2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+#section1 #first-half button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 300;
+    color: white;
+    background-color: #000000;
+    padding: 0.5rem 0.9rem;
+    margin: 1rem 0.3rem;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize;
+    box-shadow: 0 1rem 1rem #5b5b5b;
+}
+
+#section1 #second-half{
+    /* border: 2px solid orange; */
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+}
+
+#section1 #second-half .round-frame {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+#section1 #second-half img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    transform: translate(0, 0%);
+}
+
+/*  */
+
+#section2 {
+    height: 100vh;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#section2 .text-content {
+    /* border: 2px solid; */
+    width: 100%;
+    height: 8%;
+    text-align: center;
+    align-content: center;
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+
+#section2 .container {
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 10vh;
+    width: 80vw;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    flex: 1;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel h3 {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+/* mobile */
+@media (min-width: 600px) {
+    body {
+      /* background-color: lightcoral; */
+    }
+    
+}
+
+/* tablet + computer */
+@media (min-width: 1024px) {
+    body {
+      /* background-color: coral; */
+    }
+
+    #section2 .container {
+        /* border: 2px solid; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 70%;
+        width: 80%;
+    }
+
+    .panel {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        border-radius: 50px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        flex: 0.5;
+        margin: 10px;
+        position: relative;
+        transition: flex 0.7s ease-in;
+    }
+
+    .panel.active {
+        flex: 3;
+    }
+
+}
