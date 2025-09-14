@@ -203,6 +203,7 @@ nav {
     display: none;
     flex: 0.9;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
     background: #fff;
     border-radius: 16px;
